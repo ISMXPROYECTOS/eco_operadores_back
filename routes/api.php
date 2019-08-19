@@ -15,5 +15,7 @@ use Illuminate\Http\Request;
 Route::post('/login', 'UserController@login');
 Route::group(['middleware' => 'checkJWT'], function() {
     Route::get('/getServicesByUser', 'ServiceController@getServicesByUser');
+    Route::get('/getServicesByWeek', 'ServiceController@getServicesByWeek');
+    Route::put('/service_update', 'ServiceController@update');
 });
 

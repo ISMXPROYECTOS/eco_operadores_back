@@ -51,10 +51,4 @@ class UserController extends Controller
             'token' => $token
         ], 200);
     }
-
-    public function prueba(Request $request){
-        $user_token = $request->user_id;
-        
-        return 'Prueba de middlware';
-    }
 }
